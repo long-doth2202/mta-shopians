@@ -43,14 +43,11 @@
                                     <div class="form-group__content">
                                         <select style="font-size: 14px;" class="product-short-select custom-select"
                                             id="province" (change)="setProvinceCode($event.target)"
-                                            formControlName="province"
+                                            formControlName="province" [ngModel]="provinceCode"
                                             [ngClass]="{'is-invalid':postForm.get('province')?.touched && postForm.get('province')?.invalid}">
-                                            <option value="0" disabled>Chọn tỉnh thành</option>
-                                            <option *ngFor="let item of provinces" [value]="item.code"
-                                                [selected]="item.code === province_code">{{item.name}}
+                                            <option value="0" selected disabled>Chọn tỉnh thành</option>
+                                            <option *ngFor="let item of provinces" [value]="item.code">{{item.name}}
                                             </option>
-
-
                                         </select>
                                         <small class="invalid-feedback">Hãy chọn tỉnh thành của bạn</small>
                                     </div>
@@ -61,11 +58,10 @@
                                     <div class="form-group__content">
                                         <select style="font-size: 14px;" class="product-short-select custom-select"
                                             id="district" (change)="setDistrictCode($event.target)"
-                                            formControlName="district"
+                                            formControlName="district" [ngModel]="districtCode"
                                             [ngClass]="{'is-invalid':postForm.get('district')?.touched && postForm.get('district')?.invalid}">
                                             <option value="0" selected disabled>Chọn huyện/thành phố</option>
-                                            <option *ngFor="let item of districts" [selected]="item.code === 2"
-                                                [value]="item.code">{{item.name}}
+                                            <option *ngFor="let item of districts" [value]="item.code">{{item.name}}
                                             </option>
                                         </select>
                                         <small class="invalid-feedback">Hãy chọn huyện/thành phố của bạn</small>
@@ -77,6 +73,7 @@
                                     <div class="form-group__content">
                                         <select style="font-size: 14px;" class="product-short-select custom-select"
                                             id="ward" (change)="setWardCode($event.target)" formControlName="ward"
+                                            [ngModel]="wardCode"
                                             [ngClass]="{'is-invalid':postForm.get('ward')?.touched && postForm.get('ward')?.invalid}">
                                             <option value="0" selected disabled>Chọn phường/xã</option>
                                             <option *ngFor="let item of wards" [value]="item.code">{{item.name}}

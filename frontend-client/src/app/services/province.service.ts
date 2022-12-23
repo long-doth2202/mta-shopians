@@ -19,12 +19,12 @@ export class ProvinceService {
   ward = 'https://provinces.open-api.vn/api/w/';
 
   distanceMatrix = "https://api.distancematrix.ai/maps/api/distancematrix/json";
-  API_KEY = "bk5LhLzrZBlwvmrEHdtrvGAQ38zn9";
+  API_KEY = "BY4kI7mNNo4ICOVKoQ0DXcAUbiFbm";
 
   constructor(private http: HttpClient) { }
 
   getDistanceMatrix(destination:string) {
-    return this.http.get(this.distanceMatrix + "?origins=Học viện kỹ thuật quân sự" +
+    return this.http.get(this.distanceMatrix + "?origins=Học viện Kỹ thuật Quân sự" +
     "&destinations=" + destination + "&key=" + this.API_KEY);
   }
 

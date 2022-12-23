@@ -24,33 +24,27 @@
                             <h5>Đăng nhập tài khoản của bạn</h5>
                             <form class="form" [formGroup]="loginForm">
                                 <div class="form-group">
-                                    <input
-                                    formControlName="email"
-                                    class="form-control"
-                                    type="text"
-                                    placeholder="Email">
+                                    <input formControlName="email" class="form-control" type="text" placeholder="Email">
                                 </div>
                                 <div class="form-group form-forgot">
-                                    <input class="form-control"
-                                        type="password"
-                                        [type]="show ? 'text' : 'password'"
-                                        formControlName="password"
-                                        id="password"
-                                        placeholder="Mật khẩu">
+                                    <input class="form-control" type="password" [type]="show ? 'text' : 'password'"
+                                        formControlName="password" id="password" placeholder="Mật khẩu">
                                     <a><app-forgot-password></app-forgot-password></a>
                                 </div>
                                 <div class="form-group">
                                     <div class="ps-checkbox">
-                                        <input class="form-control" type="checkbox" (click)="toggle()" id="remember-me" name="remember-me" />
+                                        <input class="form-control" type="checkbox" (click)="toggle()" id="remember-me"
+                                            name="remember-me" />
                                         <label for="remember-me">Hiện thị mật khẩu?</label>
                                     </div>
                                 </div>
                                 <div class="form-group submtit">
-                                    <button (click)="sign_in()" type="submit" class="ps-btn ps-btn--fullwidth">Đăng nhập</button>
+                                    <button (click)="sign_in()" type="submit" class="ps-btn ps-btn--fullwidth">Đăng
+                                        nhập</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="ps-form__footer">
+                        <!-- <div class="ps-form__footer">
                             <p>Connect with:</p>
                             <ul class="ps-list--social">
                                 <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -58,77 +52,62 @@
                                 <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="ps-tab" id="sign-up">
                         <div class="ps-form__content">
                             <h5>Đăng ký tài khoản</h5>
-                            
+
                             <form class="form" [formGroup]="registerForm">
                                 <div class="form-group">
                                     <input
-                                    [ngClass]="{'is-invalid':registerForm.get('email')?.touched && registerForm.get('email')?.invalid}"
-                                    formControlName="email"
-                                    class="form-control"
-                                    type="text"
-                                    placeholder="Nhập địa chỉ email">
+                                        [ngClass]="{'is-invalid':registerForm.get('email')?.touched && registerForm.get('email')?.invalid}"
+                                        formControlName="email" class="form-control" type="text"
+                                        placeholder="Nhập địa chỉ email">
                                 </div>
                                 <div class="form-group">
                                     <input
-                                    [ngClass]="{'is-invalid':registerForm.get('otp')?.touched && registerForm.get('otp')?.invalid}"
-                                    formControlName="otp"
-                                    maxlength="6"
-                                    name="otp" id="otp" 
-                                    class="form-control"
-                                    type="text"
-                                    placeholder="Mã xác thực OTP">
-                                    <a style="font-size: 14px;"
-                                        class="btn btn-warning"
+                                        [ngClass]="{'is-invalid':registerForm.get('otp')?.touched && registerForm.get('otp')?.invalid}"
+                                        formControlName="otp" maxlength="6" name="otp" id="otp" class="form-control"
+                                        type="text" placeholder="Mã xác thực OTP">
+                                    <a style="font-size: 14px;" class="btn btn-warning"
                                         (click)="registerForm.get('email')?.valid?sendOtp():sendError()">
                                         <span>Lấy mã xác thực OTP</span>
                                     </a>
                                 </div>
                                 <div class="form-group">
                                     <input
-                                    [ngClass]="{'is-invalid':registerForm.get('name')?.touched && registerForm.get('name')?.invalid}"
-                                    formControlName="name"
-                                    class="form-control"
-                                    type="text"
-                                    placeholder="Họ và tên">
+                                        [ngClass]="{'is-invalid':registerForm.get('name')?.touched && registerForm.get('name')?.invalid}"
+                                        formControlName="name" class="form-control" type="text" placeholder="Họ và tên">
                                 </div>
                                 <div class="form-group">
                                     <input
-                                    [ngClass]="{'is-invalid':registerForm.get('password')?.touched && registerForm.get('password')?.invalid}"
-                                    id="pass" [type]="show ? 'text' : 'password'"
-                                    formControlName="password"
-                                    class="form-control"
-                                    type="password"
-                                    placeholder="Mật khẩu">
-                                    <button class="btn btn-warning" style="font-size: 14px;" type="button" (click)="toggle()"><span>Hiển thị mật khẩu?</span></button>
+                                        [ngClass]="{'is-invalid':registerForm.get('password')?.touched && registerForm.get('password')?.invalid}"
+                                        id="pass" [type]="show ? 'text' : 'password'" formControlName="password"
+                                        class="form-control" type="password" placeholder="Mật khẩu">
+                                    <button class="btn btn-warning" style="font-size: 14px;" type="button"
+                                        (click)="toggle()"><span>Hiển thị mật khẩu?</span></button>
                                 </div>
                                 <div class="form-group">
                                     <input
-                                    [ngClass]="{'is-invalid':registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid}"
-                                    formControlName="phone"
-                                    class="form-control"
-                                    type="text"
-                                    placeholder="Số điện thoại">
+                                        [ngClass]="{'is-invalid':registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid}"
+                                        formControlName="phone" class="form-control" type="text"
+                                        placeholder="Số điện thoại">
                                 </div>
                                 <div class="form-group">
                                     <input
-                                    [ngClass]="{'is-invalid':registerForm.get('address')?.touched && registerForm.get('address')?.invalid}"
-                                    formControlName="address"
-                                    class="form-control"
-                                    type="text"
-                                    placeholder="Địa chỉ">
+                                        [ngClass]="{'is-invalid':registerForm.get('address')?.touched && registerForm.get('address')?.invalid}"
+                                        formControlName="address" class="form-control" type="text"
+                                        placeholder="Địa chỉ">
                                 </div>
                                 <div class="form-group submtit">
-                                    <button type="submit" (click)="sign_up()" class="ps-btn ps-btn--fullwidth">Đăng ký miễn phí</button>
+                                    <button type="submit" (click)="sign_up()" class="ps-btn ps-btn--fullwidth">Đăng ký
+                                        miễn phí</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="ps-form__footer">
+                        <!-- <div class="ps-form__footer">
                             <p>Connect with:</p>
                             <ul class="ps-list--social">
                                 <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -136,7 +115,7 @@
                                 <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </form>

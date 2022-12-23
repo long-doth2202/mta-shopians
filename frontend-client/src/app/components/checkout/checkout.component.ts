@@ -118,6 +118,7 @@ export class CheckoutComponent implements OnInit {
     this.shipAmount = 0;
     this.distanceAmount = 0;
     this.shipUnitAmount = 0;
+    this.province_code = this.district_code = this.ward_code = 0;
     this.getAllItem();
     this.getProvinces();
   }
@@ -177,16 +178,45 @@ export class CheckoutComponent implements OnInit {
       console.log("debug_3: " + this.ward_str);
       console.log("debug_4: " + this.address_remain_str);
 
-      this.location.getAllProvinces().subscribe(data => {
+      this.location.getAllProvinces().subscribe(data => { // get provinces
         this.provinces = data as Province[];
         for (let i = 0; i < this.provinces.length; i++) {
           let provinceElement = this.provinces[i] as Province;
-          // const newLocal = this.provinces + "/" + provinceElement.name;
-          // console.log(newLocal);
           if (provinceElement.name === this.province_str) {
             this.province_code = provinceElement.code;
-            console.log("debug:" + this.province_code);
-            this.setProvinceCode(this.province_code);
+
+            this.provinceCode = this.province_code;
+
+            console.log("hihi" + this.provinceCode);
+
+            this.location.getDistricts(this.provinceCode).subscribe(data => { // get districts
+              this.province = data as Province;
+              this.districts = this.province.districts;
+
+              for (let i = 0; i < this.districts.length; i++) {
+                let districtsElement = this.districts[i] as District;
+                if (districtsElement.name === this.district_str) {
+                  this.district_code = districtsElement.code;
+      
+                  this.districtCode = this.district_code;
+
+                  this.location.getWards(this.districtCode).subscribe(data => {
+                    this.district = data as District;
+                    this.wards = this.district.wards;
+
+                    for (let i = 0; i < this.wards.length; i++) {
+                      let wardsElement = this.wards[i] as District;
+                      if (wardsElement.name === this.ward_str) {
+                        this.ward_code = wardsElement.code;
+            
+                        this.wardCode = this.ward_code;
+                      }
+                    }
+                  })
+                }
+              }
+            })
+
           } else {
           }
         }

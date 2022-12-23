@@ -116,6 +116,9 @@ export class ProductDetailComponent implements OnInit {
   getAvgRate(id: number): number {
     let avgRating: number = 0;
     this.countRate = 0;
+    // console.log(this.rateAll)
+
+
     for (const item of this.rateAll) {
       if (item.product.productId === id) {
         avgRating += item.rating;
