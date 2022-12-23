@@ -1,0 +1,25 @@
+.header .header__top {
+  background-color: #d70018;
+  padding: 10px;
+}
+
+.ps-form--quick-search button {
+  background-color: #d9534f;
+}
+
+.header__center {
+  padding-top: 10px;
+  height: 42px;
+}
+
+.header__right {
+  padding-top: 10px;
+}
+
+.header .header__actions {
+  justify-content: center;
+}
+
+.navigation {
+  background-color: #d9534f;
+}

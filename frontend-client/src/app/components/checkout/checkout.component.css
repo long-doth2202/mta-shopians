@@ -1,0 +1,11 @@
+.ps-section--shopping {
+  padding: 30px 0;
+}
+
+.ps-section--shopping .ps-section__header {
+  padding-bottom: 30px;
+}
+
+.ps-btn--fullwidth, button.ps-btn--fullwidth {
+  background-color: #d9534f;
+}

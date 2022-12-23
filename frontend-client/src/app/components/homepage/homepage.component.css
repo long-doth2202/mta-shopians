@@ -1,0 +1,25 @@
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 5rem;
+  color: #d3d3d3;
+}
+.full {
+  color: #d9534f;
+}
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: #d9534f;
+}
+
+#homepage-1 .ps-site-features {
+  padding-bottom: 10px;
+}
+.ps-block--site-features .ps-block__left i {
+  color: #d70018;
+}
+
+
+
