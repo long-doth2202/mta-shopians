@@ -86,6 +86,12 @@
 
 ### 1. Admin
 
+<img src="https://i.imgur.com/3419HSE.jpg">
+<img src="https://i.imgur.com/ACO3cYI.jpg">
+
 <a name="customerfrontend"></a>
 
 ### 2. Customer
+
+<img src="https://i.imgur.com/nrCL2SL.jpg">
+<img src="https://i.imgur.com/h5hc95r.jpg">
