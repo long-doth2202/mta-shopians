@@ -35,14 +35,57 @@
 
 ### 2. Technology used
 
-<a name="mainfeatures"></a>
-
 - Front-end is written in AngularJS language – a framework for dynamic web applications, with two core features, `Data binding` and `Dependency injection`, helping developers write less code with more functionality.
 - Back-end is written in Java language, using `Java Spring Boot` framework - a powerful framework that allows building and running applications on JVM conveniently and quickly.
 - Database: using `MySQL` - RDBMS open source database management system with the advantages of flexibility, high performance and safety.
 
+<a name="mainfeatures"></a>
+
 ## II. Main features
+
+<a name="admin"></a>
+
+### 1. Admin
+
+- Customer statistics.
+- Rating statistics.
+- Statistics of best-selling products.
+- Inventory statistics.
+- Revenue statistics.
+- Manage products, categories.
+- Order management.
+
+<a name="customer"></a>
+
+### 2. Customer
+
+- Display product categories.
+- Show list of products: best sellers, new arrivals, trending,...
+- Show product details: product name, price, description, likes,...
+- Product search.
+- Recommend related products.
+- Pagination, sort products by price.
+- Log in/Sign up.
+
+<a name="customerloggedin"></a>
+
+### 3. Customer - logged in
+
+- Cart.
+- Order history.
+- Payment: COD, online.
+- Favorites list.
+- Product rating.
+- Customer Information.
 
 <a name="frontend"></a>
 
 ## III. Frontend
+
+<a name="adminfrontend"></a>
+
+### 1. Admin
+
+<a name="customerfrontend"></a>
+
+### 2. Customer
